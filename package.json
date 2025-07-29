@@ -1,0 +1,12 @@
+{
+  "name": "react-happy-dialog",
+  "version": "0.0.1",
+  "description": "react 优雅弹窗组件实现",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
