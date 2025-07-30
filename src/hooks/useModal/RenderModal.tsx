@@ -1,5 +1,5 @@
 import React from "react";
-import type { ModalFc } from ".";
+import type { ModalFc } from "./useModal";
 
 export type ModalInstance = {
   open: (params: any) => void;

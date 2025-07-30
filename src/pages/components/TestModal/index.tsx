@@ -1,6 +1,10 @@
 import { message, Modal } from "antd";
 import React from "react";
 
+type Params = {
+  name: string;
+};
+
 interface Props<Params = any> {
   visible?: boolean;
   afterClose?: () => void;
@@ -9,7 +13,9 @@ interface Props<Params = any> {
   params?: Params;
 }
 
-export function TestModal<Params = any>(props: Props<Params>) {
+export function TestModal(props: Props<Params>) {
+  const { params } = props;
+
   React.useEffect(() => {
     message.warn("modal render");
   }, []);
@@ -24,7 +30,7 @@ export function TestModal<Params = any>(props: Props<Params>) {
       }}
       afterClose={props?.afterClose}
     >
-      一段文字
+      一段文字 {params?.name}
     </Modal>
   );
 }
