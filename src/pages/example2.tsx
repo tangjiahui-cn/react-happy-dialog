@@ -12,14 +12,7 @@ const useMyModal = createUseModal<{
 }>((props) => {
   const { params } = props;
   return (
-    <Modal
-      {...antdModal(props)}
-      title={"标题"}
-      onOk={() => {
-        props?.onOk?.();
-      }}
-      afterClose={props?.afterClose}
-    >
+    <Modal {...antdModal(props)} title={"标题"}>
       {params?.name || "-"}
     </Modal>
   );

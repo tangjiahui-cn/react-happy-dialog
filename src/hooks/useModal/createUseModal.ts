@@ -5,7 +5,7 @@ import {
   type ModalResultType,
 } from "./useModal";
 
-type UseModalHook<Params> = (
+export type UseModalHook<Params> = (
   options?: ModalCallbackOptions,
 ) => ModalResultType<Params>;
 

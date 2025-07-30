@@ -1,19 +1,12 @@
 import { message, Modal } from "antd";
 import React from "react";
+import type { ModalFcProps } from "../../../hooks/useModal";
 
 type Params = {
   name: string;
 };
 
-interface Props<Params = any> {
-  visible?: boolean;
-  afterClose?: () => void;
-  onCancel?: () => void;
-  onOk?: (data: string) => void;
-  params?: Params;
-}
-
-export function TestModal(props: Props<Params>) {
+export function TestModal(props: ModalFcProps<Params>) {
   const { params } = props;
 
   React.useEffect(() => {
